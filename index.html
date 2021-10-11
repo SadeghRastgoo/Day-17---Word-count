@@ -20,8 +20,16 @@
     <link rel="stylesheet" href="styles/style.css" />
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+    <!-- Background -->
+    <script src="https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/EasePack.min.js"></script>
+    <script src="https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/rAF.js"></script>
+    <script src="https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/TweenLite.min.js"></script>
   </head>
   <body>
+    <div id="large-header" class="large-header">
+      <canvas id="demo-canvas"></canvas>
+    </div>
+
     <div class="cursor">
       <div class="cursor__ball cursor__ball--big">
         <svg height="30" width="30">
@@ -36,37 +44,44 @@
       </div>
     </div>
     <!--  -->
-    <div class="logo hoverable"></div>
-    <div class="textarea-container">
-      <textarea
-        class="textarea hoverable"
-        name="input"
-        id="text-area"
-        placeholder="Exam, Test, Certificate"
-      ></textarea>
-    </div>
-    <div class="beauty-elements">
-      <img class="beauty-elements__pencil-img" src="pencil.png" alt="pencil" />
-    </div>
-    <div class="word-counter">
-      <p class="word-counter__text">Word Count:</p>
-      <p class="word-counter__number" id="word-count">0</p>
-    </div>
 
-    <div class="other-counter">
-      <div class="letter-counter">
-        <div class="letter-counter__text counter__text">Letter Count:</div>
-        <div class="letter-counter__number" id="character-count">0</div>
+    <div class="app">
+      <div class="logo hoverable"></div>
+      <div class="textarea-container">
+        <textarea
+          class="textarea hoverable"
+          name="input"
+          id="text-area"
+          placeholder="Exam, Test, Certificate"
+        ></textarea>
       </div>
-      <div class="longest-word">
-        <div class="longest-word__text counter__text">Longest Word:</div>
-        <div class="longest-word__word" id="longest-count">test</div>
+      <div class="beauty-elements">
+        <img
+          class="beauty-elements__pencil-img"
+          src="pencil.png"
+          alt="pencil"
+        />
       </div>
-      <div class="sentences-counter">
-        <div class="sentences-counter__text counter__text">
-          Sentences Count:
+      <div class="word-counter">
+        <p class="word-counter__text">Word Count:</p>
+        <p class="word-counter__number" id="word-count">0</p>
+      </div>
+
+      <div class="other-counter">
+        <div class="letter-counter">
+          <div class="letter-counter__text counter__text">Letter Count:</div>
+          <div class="letter-counter__number" id="character-count">0</div>
         </div>
-        <div class="letter-counter__number" id="sentences-count">0</div>
+        <div class="longest-word">
+          <div class="longest-word__text counter__text">Longest Word:</div>
+          <div class="longest-word__word" id="longest-count">test</div>
+        </div>
+        <div class="sentences-counter">
+          <div class="sentences-counter__text counter__text">
+            Sentences Count:
+          </div>
+          <div class="letter-counter__number" id="sentences-count">0</div>
+        </div>
       </div>
     </div>
 
