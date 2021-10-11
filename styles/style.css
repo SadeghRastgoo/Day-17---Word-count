@@ -1,0 +1,249 @@
+/* My Notes =>  400,500,700 */
+:root {
+  --background-color: rgb(242, 68, 56);
+  --background-color-2: rgb(224, 58, 45);
+  --text-color: rgb(255, 214, 203);
+  --beauty-elements-color: rgb(81, 18, 14);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  position: relative;
+  cursor: none;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 90%;
+  margin: 0 auto;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-weight: 500;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 3rem;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  max-width: 500px;
+}
+
+.logo {
+  position: absolute;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  margin-top: 2.5rem;
+  background-color: #51120e;
+  cursor: pointer;
+  overflow: hidden;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.logo:hover {
+  width: 190px;
+  border-radius: 10rem;
+}
+
+.logo::after {
+  content: "Word Counter";
+  position: absolute;
+  font-size: 2.5rem;
+  left: -20rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 200px;
+  color: white;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.logo:hover::after {
+  left: 1.5rem;
+}
+
+.textarea-container {
+  margin-top: 12rem;
+  position: relative;
+  width: 90%;
+  height: 80%;
+  max-height: 300px;
+  padding: 1rem 0;
+  border-bottom: 3px solid #de3c30;
+}
+
+.textarea-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15%;
+  height: 3px;
+  background-color: #b22219;
+}
+
+.textarea-container .textarea {
+  position: relative;
+  background: transparent;
+  width: 100%;
+  height: 100%;
+  padding: 2.5rem 0;
+  border: none;
+  outline: none;
+  color: var(--text-color);
+  font-size: 40px;
+  font-weight: 500;
+  resize: none;
+  z-index: 9;
+}
+
+.textarea-container .textarea::-webkit-input-placeholder {
+  color: var(--text-color);
+}
+
+.textarea-container .textarea:-ms-input-placeholder {
+  color: var(--text-color);
+}
+
+.textarea-container .textarea::-ms-input-placeholder {
+  color: var(--text-color);
+}
+
+.textarea-container .textarea::placeholder {
+  color: var(--text-color);
+}
+
+.beauty-elements {
+  background-color: var(--background-color-2);
+  border-radius: 50%;
+  width: 430px;
+  height: 430px;
+  position: absolute;
+  right: -25%;
+  top: 28%;
+}
+
+.beauty-elements::after {
+  content: "";
+  position: absolute;
+  top: 67%;
+  left: -17%;
+  width: 150px;
+  height: 30px;
+  background-color: var(--beauty-elements-color);
+  border-radius: 6rem;
+}
+
+.beauty-elements img {
+  width: 115%;
+  position: absolute;
+  right: -40%;
+  top: -25%;
+}
+
+.word-counter {
+  margin-top: 25rem;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.word-counter__number {
+  font-size: 13rem;
+  font-weight: 700;
+  margin-top: -14px;
+}
+
+.other-counter {
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.other-counter > div:not(:last-child) {
+  position: relative;
+}
+
+.other-counter > div:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: -3rem;
+  width: 2px;
+  height: 67px;
+  background-color: #de392d;
+  -webkit-transform: translateY(-50%) rotate(25deg);
+          transform: translateY(-50%) rotate(25deg);
+  top: 50%;
+}
+
+.other-counter .counter__text {
+  font-size: 1.5rem;
+}
+
+.other-counter .counter__text + div {
+  font-size: 2.6rem;
+  margin-top: 0.4rem;
+}
+
+.other-counter .longest-word__word {
+  width: 120px;
+  max-width: 120px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cursor {
+  pointer-events: none;
+}
+
+.cursor__ball {
+  position: fixed;
+  top: 0;
+  left: 0;
+  mix-blend-mode: difference;
+  z-index: 1000;
+}
+
+.cursor__ball circle {
+  fill: #f7f8fa;
+}
+/*# sourceMappingURL=style.css.map */
